@@ -1,0 +1,43 @@
+
+.weather-card-wrapper {
+max-width: 600px;
+margin:30px auto;
+   
+}
+
+
+.weather-card {
+
+    border:1px solid #e7e7e7;
+    border-radius: 10px;
+    padding:30px;
+    margin-bottom:20px;
+}
+
+
+.weather-card ul {
+
+list-style-type: none;
+
+}
+
+.main-temperature {
+
+    display:inline;
+    position:relative;
+    top:10px;
+}
+
+
+.main-temperature .degrees {
+
+    font-size:48px;
+}
+
+
+.main-temperature .units {
+
+    position:relative;
+    top:-21px;
+   
+}
