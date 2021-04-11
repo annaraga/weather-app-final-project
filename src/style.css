@@ -21,6 +21,13 @@ list-style-type: none;
 
 }
 
+
+.weather-card li:first-letter {
+
+    text-transform: capitalize;
+    
+    }
+
 .main-temperature {
 
     display:inline;
@@ -41,3 +48,4 @@ list-style-type: none;
     top:-21px;
    
 }
+
