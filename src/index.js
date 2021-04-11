@@ -51,8 +51,32 @@ iconElement.setAttribute("alt", response.data.weather[0].description);
 
 
 
-let apiKey = "add14ae795612e68aab6557cae6f369f";
-let city = `Valencia`
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+function search(city) {
+        let apiKey = "add14ae795612e68aab6557cae6f369f";
+        let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+        axios.get(apiUrl).then(showTemperature);  
+  }
+  
 
-axios.get(apiUrl).then(showTemperature);
+  
+function hadleSubmit (event) {
+    event.preventDefault();
+
+    let searchCity = document.querySelector("#city-value");
+
+    if (searchCity.value) {
+        search(searchCity.value);
+      } else {
+        alert(`Please, type a city name.`);
+      }
+
+}
+
+search("Valencia");
+
+  let enterCityForm = document.querySelector("#enter-city");
+  enterCityForm.addEventListener("submit", hadleSubmit);
+
+
+
+
