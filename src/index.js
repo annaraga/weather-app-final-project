@@ -38,6 +38,7 @@ let windElement = document.querySelector("#wind");
 let dateElement = document.querySelector("#date");
 let iconElement = document.querySelector("#icon");
 
+celsiusTemperature = Math.round(response.data.main.temp);
 cityElement.innerHTML = response.data.name;
 descriptionElement.innerHTML = response.data.weather[0].description;
 degreesElement.innerHTML = Math.round(response.data.main.temp);
@@ -58,6 +59,28 @@ function search(city) {
   }
   
 
+
+  function showCelsius(event){
+    event.preventDefault();
+    let degreesElement = document.querySelector("#degrees");
+    degreesElement.innerHTML = Math.round(celsiusTemperature);
+    celsiusLink.classList.add("active");
+    fahrenheitLink.classList.remove("active");
+    
+}
+
+
+
+function showFahrenheit(event){
+    event.preventDefault();
+    let degreesElement = document.querySelector("#degrees");
+    let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+    degreesElement.innerHTML = Math.round(fahrenheitTemperature);
+    celsiusLink.classList.remove("active");
+    fahrenheitLink.classList.add("active");
+}
+
+
   
 function hadleSubmit (event) {
     event.preventDefault();
@@ -72,10 +95,25 @@ function hadleSubmit (event) {
 
 }
 
-search("Valencia");
+
+
+
+
 
   let enterCityForm = document.querySelector("#enter-city");
   enterCityForm.addEventListener("submit", hadleSubmit);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", showCelsius);
+
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", showFahrenheit);
+
+let celsiusTemperature = null;
+
+
+  search("Valencia");
 
 
 
