@@ -27,6 +27,29 @@ return `${day} ${hours}:${minutes}`;
 
 }
 
+function showForecast() {
+
+let forecastElement = document.querySelector("#forecast");
+
+let forecastHtml = `<div class="row">`;
+
+let days = ["Tue", "Wed", "Thu", "Fry", "Sat", "Sun"];
+
+days.forEach (function(day) {
+
+forecastHtml = forecastHtml + `<div class="col-2">
+<span class="forecast-date">${day}</span>
+<img src="http://openweathermap.org/img/wn/04d@2x.png" alt="weather-icon">
+<div class="forecast-temp"><span class="forecast-max-temp">18º</span> <span class="forecast-min-temp">12º</span></div>
+
+ </div>`;});
+
+forecastHtml = forecastHtml + `</div>`;
+forecastElement.innerHTML = forecastHtml;
+
+}
+
+
 
 function showTemperature (response){
 
@@ -115,6 +138,6 @@ let celsiusTemperature = null;
 
   search("Valencia");
 
-
+  showForecast();
 
 
