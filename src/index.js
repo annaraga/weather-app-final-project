@@ -27,7 +27,9 @@ return `${day} ${hours}:${minutes}`;
 
 }
 
-function showForecast() {
+function showForecast(response) {
+
+console.log(response.data.daily);
 
 let forecastElement = document.querySelector("#forecast");
 
@@ -50,6 +52,14 @@ forecastElement.innerHTML = forecastHtml;
 }
 
 
+function getForecast (coordinates){
+  let apiKey = `add14ae795612e68aab6557cae6f369f`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(showForecast);  
+
+
+}
+
 
 function showTemperature (response){
 
@@ -70,6 +80,9 @@ windElement.innerHTML = Math.round(response.data.wind.speed);
 dateElement.innerHTML = formatDate(response.data.dt * 1000);
 iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 iconElement.setAttribute("alt", response.data.weather[0].description);
+
+getForecast(response.data.coord);
+
 
 }
 
@@ -138,6 +151,6 @@ let celsiusTemperature = null;
 
   search("Valencia");
 
-  showForecast();
+  
 
 
