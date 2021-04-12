@@ -75,3 +75,31 @@ text-decoration:none;
 
   }
 
+
+.forecast {
+margin-top:20px;
+text-align:center;
+
+  } 
+
+  .forecast img {
+ max-width:52px;
+    
+      } 
+
+.forecast-date {
+
+    opacity:0.6;
+}
+
+.forecast-temp {
+
+    font-size:13px;
+}
+
+
+.forecast-min-temp {
+
+    opacity:0.6;
+}
+
