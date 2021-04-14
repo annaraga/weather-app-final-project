@@ -116,8 +116,7 @@ function search(city) {
     event.preventDefault();
     let degreesElement = document.querySelector("#degrees");
     degreesElement.innerHTML = Math.round(celsiusTemperature);
-    celsiusLink.classList.add("active");
-    fahrenheitLink.classList.remove("active");
+  
     
 }
 
@@ -128,8 +127,7 @@ function showFahrenheit(event){
     let degreesElement = document.querySelector("#degrees");
     let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
     degreesElement.innerHTML = Math.round(fahrenheitTemperature);
-    celsiusLink.classList.remove("active");
-    fahrenheitLink.classList.add("active");
+   
 }
 
 
@@ -150,19 +148,9 @@ function hadleSubmit (event) {
 
 
 
-
-
   let enterCityForm = document.querySelector("#enter-city");
   enterCityForm.addEventListener("submit", hadleSubmit);
 
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", showCelsius);
-
-
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", showFahrenheit);
-
-let celsiusTemperature = null;
 
 
   search("Valencia");
