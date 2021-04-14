@@ -1,3 +1,8 @@
+body {
+
+    background:#f3f3f3;
+}
+
 
 .weather-card-wrapper {
 max-width: 600px;
@@ -8,8 +13,9 @@ margin:30px auto;
 
 .weather-card {
 
-    border:1px solid #e7e7e7;
+    background: white;
     border-radius: 10px;
+    box-shadow: 0 2px 6px rgb(0 0 0 / 10%);
     padding:30px;
     margin-bottom:20px;
 }
@@ -50,7 +56,15 @@ list-style-type: none;
 }
 
 
-[type="submit"] {
+.search-button {
+
+color:#ffffff;
+background: #6350ef;
+border-color:#6350ef;
+
+}
+
+.search-button[type="submit"] {
     font-family: "FontAwesome";
   }
 
@@ -97,3 +111,12 @@ text-align:center;
     opacity:0.6;
 }
 
+.credits {
+
+    text-align:center;
+    font-size:13px;
+}
+
+.credits a {
+
+color:#6350ef }
