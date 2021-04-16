@@ -69,8 +69,8 @@ list-style-type: none;
 .search-button {
 
 color:#ffffff;
-background: #6350ef;
-border-color:#6350ef;
+background: #2ae0ae;
+border-color:#2ae0ae;
 
 }
 
@@ -83,8 +83,7 @@ border-color:#6350ef;
     
     }
     
-
-    .search-button:active {
+.search-button:active {
 
         color:#ffffff;
         background: #6350ef;
@@ -92,6 +91,15 @@ border-color:#6350ef;
         opacity:0.8;
         
         }
+
+.search-button:focus {
+
+        color:#ffffff;
+            background: #6350ef;
+            border-color:#6350ef;
+            opacity:0.8;
+            
+            }
 
 
 .search-button[type="submit"] {
