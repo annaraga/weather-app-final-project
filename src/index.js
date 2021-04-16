@@ -57,7 +57,7 @@ forecast.forEach (function(forecastDay, index) {
 
 forecastHtml = forecastHtml + `<div class="col-2">
 <span class="forecast-date">${formatForecastDay(forecastDay.dt)}</span>
-<img src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png" alt="weather-icon">
+<img src="img/${forecastDay.weather[0].icon}.svg" alt="weather-icon" class="forecast-icon">
 <div class="forecast-temp"><span class="forecast-max-temp">${Math.round(forecastDay.temp.max)}º</span> <span class="forecast-min-temp">${Math.round(forecastDay.temp.min)}º</span></div>
 
  </div>`;}});
@@ -94,7 +94,7 @@ degreesElement.innerHTML = Math.round(response.data.main.temp);
 humidityElement.innerHTML = response.data.main.humidity;
 windElement.innerHTML = Math.round(response.data.wind.speed);
 dateElement.innerHTML = formatDate(response.data.dt * 1000);
-iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+iconElement.setAttribute("src", `img/${response.data.weather[0].icon}.svg`);
 iconElement.setAttribute("alt", response.data.weather[0].description);
 
 getForecast(response.data.coord);
