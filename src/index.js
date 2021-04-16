@@ -55,7 +55,7 @@ forecast.forEach (function(forecastDay, index) {
   if(index < 6) {
 
 
-forecastHtml = forecastHtml + `<div class="col-2">
+forecastHtml = forecastHtml + `<div class="col-sm-2 col-4">
 <span class="forecast-date">${formatForecastDay(forecastDay.dt)}</span>
 <img src="img/${forecastDay.weather[0].icon}.svg" alt="weather-icon" class="forecast-icon">
 <div class="forecast-temp"><span class="forecast-max-temp">${Math.round(forecastDay.temp.max)}º</span> <span class="forecast-min-temp">${Math.round(forecastDay.temp.min)}º</span></div>

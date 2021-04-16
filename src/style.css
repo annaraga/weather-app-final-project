@@ -118,6 +118,8 @@ text-align:center;
 .forecast-date {
 
     opacity:0.6;
+    display:block;
+    margin-top:20px;
 }
 
 .forecast-temp {
