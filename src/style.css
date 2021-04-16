@@ -34,6 +34,7 @@ margin:30px auto;
 .weather-card ul {
 
 list-style-type: none;
+padding:initial;
 
 }
 
@@ -44,11 +45,16 @@ list-style-type: none;
     
     }
 
+.main-temperature-wrapper {
+    text-align:center;
+}
+
+
 .main-temperature {
 
     display:inline;
     position:relative;
-    top:10px;
+    top:15px;
 }
 
 
