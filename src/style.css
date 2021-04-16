@@ -1,8 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+
+
 body {
 
     background:#f3f3f3;
+    font-family: 'Nunito', sans-serif;
 }
 
+
+h1 {
+
+font-weight:700;
+
+}
 
 .weather-card-wrapper {
 max-width: 600px;
